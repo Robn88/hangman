@@ -14,3 +14,7 @@ def welcome_to_game():
 
 print("Welcome to hangman!")
 welcome_to_game()
+
+f = open("easy.txt", "r")
+
+print(f.read())
