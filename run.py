@@ -20,4 +20,23 @@ for word in get_words:
     easy_words.append(word)
 
 print(easy_words)
-print(random.choice(easy_words))
+
+word_to_guess = random.choice(easy_words)
+
+
+def create_hidden_word():
+    hidden_word = "_" * len(word_to_guess)
+    return hidden_word
+
+
+print(create_hidden_word())
+
+"""
+def main():
+    already_guessed_letters = []
+    lives_remaining = 10
+    word_not_guessed = True
+    while word_not_guessed True:
+        guess = input("Please enter a letter:\n")
+"""
+
