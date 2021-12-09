@@ -1,6 +1,5 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import random
+
 
 def welcome_to_game():
     while True:
@@ -15,6 +14,10 @@ def welcome_to_game():
 print("Welcome to hangman!")
 welcome_to_game()
 
-f = open("easy.txt", "r")
+easy_words = []
+get_words = open('easy.txt').read().split()
+for word in get_words:
+    easy_words.append(word)
 
-print(f.read())
+print(easy_words)
+print(random.choice(easy_words))
