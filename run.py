@@ -32,6 +32,18 @@ print(create_hidden_word())
 """
 
 
+def end_game():
+    continue_playing = input("Would you like to keep playing? y / n \n")
+    if continue_playing == "y":
+        print("\n")
+        main()
+    elif continue_playing == "n":
+        print("Thanks for playing, see you soon!")
+    else:
+        print(f"Sorry, {continue_playing} is not a valid command. Please press y or n. \n")
+        end_game()
+                        
+
 def main():
     hidden_word = "_" * len(word_to_guess)
     already_guessed_letters = []
@@ -47,6 +59,7 @@ def main():
             elif guess not in word_to_guess:
                 print(f"Bad luck! {guess} is not in the word!")
                 already_guessed_letters.append(guess)
+                lives_remaining -= 1
             else:
                 print(f"Well done, {guess} is in the word!\n")
                 already_guessed_letters.append(guess)
@@ -60,17 +73,17 @@ def main():
                 if "_" not in hidden_word:
                     word_not_guessed = not True
                     print(f"Congratulations! You found the word: {word_to_guess} \n")
-                    while True:
-                        continue_playing = input("Would you like to keep playing? y / n \n")
-                        if continue_playing == "y":
-                            print("\n")
-                            main()
-                        elif continue_playing == "n":
-                            print("Thanks for playing, see you soon!")
-                            word_not_guessed = not True
-                            break
-                        else:
-                            print(f"Sorry, {continue_playing} is not a valid command. Please press y or n. \n")
+                    end_game()
+                    # while True:
+                    #     continue_playing = input("Would you like to keep playing? y / n \n")
+                    #     if continue_playing == "y":
+                    #         print("\n")
+                    #         main()
+                    #     elif continue_playing == "n":
+                    #         print("Thanks for playing, see you soon!")
+                    #         break
+                    #     else:
+                    #         print(f"Sorry, {continue_playing} is not a valid command. Please press y or n. \n")
 
 
 main()
