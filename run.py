@@ -40,6 +40,7 @@ def main():
     # lives_remaining = 10
     word_not_guessed = True
     while word_not_guessed:
+        print(hidden_word)
         guess = input("Please enter a letter:\n")
         if len(guess) == 1 and guess.isalpha():
             if guess in already_guessed_letters:
@@ -51,11 +52,18 @@ def main():
             else:
                 print(f"Well done, {guess} is in the word!")
                 already_guessed_letters.append(guess)
-                print(already_guessed_letters)
+                convert_to_list = list(hidden_word)
+                for index, underscore in enumerate(hidden_word):
+                    print(index, underscore)
                 for i, letter in enumerate(word_to_guess):
-                    if letter != "_" and guess == letter:
-                        word_to_guess[i] = letter
-                        print("".join(word_to_guess))
+                    print(i, letter)
+                    if guess == letter:
+                        convert_to_list[i] = guess
+                        hidden_word = ("".join(convert_to_list))
+                                        
+                    # if letter != "_" and guess == letter:
+                    #     word_to_guess[i] = letter
+                    #     print("".join(word_to_guess))
         
 
 main()
