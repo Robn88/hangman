@@ -47,9 +47,10 @@ def end_game():
 def main():
     hidden_word = "_" * len(word_to_guess)
     already_guessed_letters = []
-    lives_remaining = 10
     word_not_guessed = True
     while word_not_guessed:
+        lives_remaining = 10
+        print(f"You have {lives_remaining} lives remaining")
         print(hidden_word)
         print("\n")
         guess = input("Please enter a letter:\n")
@@ -60,6 +61,7 @@ def main():
                 print(f"Bad luck! {guess} is not in the word!")
                 already_guessed_letters.append(guess)
                 lives_remaining -= 1
+                print(f"You have {lives_remaining} lives remaining")
             else:
                 print(f"Well done, {guess} is in the word!\n")
                 already_guessed_letters.append(guess)
