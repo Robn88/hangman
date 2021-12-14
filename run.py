@@ -34,13 +34,12 @@ print(create_hidden_word())
 
 def main():
     hidden_word = "_" * len(word_to_guess)
-    print(hidden_word)
-    print(word_to_guess)
     already_guessed_letters = []
-    # lives_remaining = 10
+    lives_remaining = 10
     word_not_guessed = True
     while word_not_guessed:
         print(hidden_word)
+        print("\n")
         guess = input("Please enter a letter:\n")
         if len(guess) == 1 and guess.isalpha():
             if guess in already_guessed_letters:
@@ -48,9 +47,8 @@ def main():
             elif guess not in word_to_guess:
                 print(f"Bad luck! {guess} is not in the word!")
                 already_guessed_letters.append(guess)
-                print(f"Already guessed: {already_guessed_letters} ")
             else:
-                print(f"Well done, {guess} is in the word!")
+                print(f"Well done, {guess} is in the word!\n")
                 already_guessed_letters.append(guess)
                 convert_to_list = list(hidden_word)
                 # for index, underscore in enumerate(hidden_word):
@@ -60,8 +58,17 @@ def main():
                         convert_to_list[i] = guess
                         hidden_word = ("".join(convert_to_list))
                 if "_" not in hidden_word:
-                    word_not_guessed = not True            
-
+                    word_not_guessed = not True
+                    print(f"Congratulations! You found the word: {word_to_guess} \n")
+                    while True:
+                        continue_playing = input("Would you like to keep playing? y / n \n")
+                        if continue_playing == "y":
+                            print("\n")
+                            main()
+                        elif continue_playing == "n":
+                            break
+                        else:
+                            print(f"Sorry, {continue_playing} is not a valid key. Please press y or n.")
 
 main()
 
