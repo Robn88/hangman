@@ -53,18 +53,15 @@ def main():
                 print(f"Well done, {guess} is in the word!")
                 already_guessed_letters.append(guess)
                 convert_to_list = list(hidden_word)
-                for index, underscore in enumerate(hidden_word):
-                    print(index, underscore)
+                # for index, underscore in enumerate(hidden_word):
+                #     print(index, underscore)
                 for i, letter in enumerate(word_to_guess):
-                    print(i, letter)
                     if guess == letter:
                         convert_to_list[i] = guess
                         hidden_word = ("".join(convert_to_list))
-                                        
-                    # if letter != "_" and guess == letter:
-                    #     word_to_guess[i] = letter
-                    #     print("".join(word_to_guess))
-        
+                if "_" not in hidden_word:
+                    word_not_guessed = not True            
+
 
 main()
 
