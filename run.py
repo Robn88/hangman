@@ -66,25 +66,13 @@ def main():
                             print("\n")
                             main()
                         elif continue_playing == "n":
+                            print("Thanks for playing, see you soon!")
+                            word_not_guessed = not True
                             break
                         else:
-                            print(f"Sorry, {continue_playing} is not a valid key. Please press y or n.")
+                            print(f"Sorry, {continue_playing} is not a valid command. Please press y or n. \n")
+
 
 main()
 
 
-"""
-def practice():
-    letters = [c for c in word_to_guess]
-    print(letters)
-    guess = input("Please enter a letter:\n")
-    for i, letter in enumerate(word_to_guess):
-        if guess == letter:
-            print("That is correct!")
-            break
-        else:
-            print("That is incorrect!")
-
-
-practice()
-"""
