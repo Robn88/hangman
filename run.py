@@ -28,15 +28,51 @@ def welcome_to_game():
 print("Welcome to hangman!")
 
 
-# def choose_difficulty():
-
-
-
 # Gets the words from the easy.txt file and stores them in a list.
 easy_words = []
 get_words = open('easy.txt').read().split()
 for word in get_words:
     easy_words.append(word)
+
+
+medium_words = []
+get_words = open('medium.txt').read().split()
+for word in get_words:
+    medium_words.append(word)
+
+
+hard_words = []
+get_words = open('hard.txt').read().split()
+for word in get_words:
+    hard_words.append(word)
+
+
+def choose_difficulty():
+    """
+    
+    """
+    difficulty_choice = input("Which difficulty would you like?\nEasy - press 1\nMedium - press 2\nHard - press 3\n")
+    print("Easy - press 1")
+    print("Medium - press 2")
+    print("Hard - press 3")
+    if difficulty_choice == "1":
+        clear()
+        print("You have chosen an easy word")
+        word_to_guess = random.choice(easy_words)
+        return word_to_guess
+    elif difficulty_choice == "2":
+        clear()
+        print("You have chosen a medium word")
+        word_to_guess = random.choice(medium_words)
+        return word_to_guess
+    elif difficulty_choice == "3":
+        clear()
+        print("You have chosen a difficult word")
+        word_to_guess = random.choice(hard_words)
+        return word_to_guess
+    else:
+        print("Please enter either 1, 2, or 3\n")
+        choose_difficulty()
 
 
 def end_game():
@@ -61,7 +97,7 @@ def main():
     The main function is where the bulk of the game runs. It begins by setting
     global variables, which will then be used in the loop.
     """
-    word_to_guess = random.choice(easy_words)
+    word_to_guess = choose_difficulty()
     hidden_word = "_" * len(word_to_guess)
     already_guessed_letters = []
     lives_remaining = 10
