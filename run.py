@@ -20,8 +20,6 @@ for word in get_words:
     easy_words.append(word)
 
 
-word_to_guess = random.choice(easy_words)
-
 """
 def create_hidden_word():
     hidden_word = "_" * len(word_to_guess)
@@ -45,6 +43,7 @@ def end_game():
                         
 
 def main():
+    word_to_guess = random.choice(easy_words)
     hidden_word = "_" * len(word_to_guess)
     already_guessed_letters = []
     lives_remaining = 10
@@ -62,7 +61,7 @@ def main():
                 already_guessed_letters.append(guess)
                 lives_remaining -= 1
                 if lives_remaining == 0:
-                    print("Oh no! You've run out of lives!\n")
+                    print(f"Oh no! You've run out of lives!\nThe correct word was {word_to_guess}! ")
                     end_game()
                 elif lives_remaining == 1:
                     print("Watch out! You only have one life left!")
