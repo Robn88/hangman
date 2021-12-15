@@ -82,17 +82,9 @@ def main():
                     word_not_guessed = not True
                     print(f"Congratulations! You found the word: {word_to_guess} \n")
                     end_game()
-                    # while True:
-                    #     continue_playing = input("Would you like to keep playing? y / n \n")
-                    #     if continue_playing == "y":
-                    #         print("\n")
-                    #         main()
-                    #     elif continue_playing == "n":
-                    #         print("Thanks for playing, see you soon!")
-                    #         break
-                    #     else:
-                    #         print(f"Sorry, {continue_playing} is not a valid command. Please press y or n. \n")
-
+        else:
+            print(f"Sorry, {guess} is not a valid guess.")
+                    
 
 main()
 
