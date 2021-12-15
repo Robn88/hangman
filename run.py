@@ -10,7 +10,6 @@ def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
 
-
 def welcome_to_game():
     """
     This function allows people to input their name.
@@ -24,8 +23,13 @@ def welcome_to_game():
         else:
             print(f"Sorry, {name} is not a valid name.Please try again.")
 
+
 # Welcome message
 print("Welcome to hangman!")
+
+
+# def choose_difficulty():
+
 
 
 # Gets the words from the easy.txt file and stores them in a list.
@@ -45,6 +49,7 @@ def end_game():
         clear()
         main()
     elif continue_playing == "n":
+        clear()
         print(f"Thanks for playing {name}, see you soon!")
     else:
         print(f"Sorry, {continue_playing} is not a valid command. Please press y or n. \n")
