@@ -25,6 +25,10 @@ Finally, the word is printed and its length is declared:
 
 ![Game start screenshot:](assets/readme/game_start.png)
 
+### Features to implement
+
+* There are several ways that the game could be improved, and more functionalities could be added. For example, by importing the Python time module, it would be possible to have a countdown timer to guess the correct word, or to calculate the overall time and compare it against other players. On that subject, at the moment, the game is a single-player experience, and no scores are recorded. It could be possible to store the scores in a document, that could then be accessed by different players.
+
 ##  __Input validation__
 
 ### Username input
@@ -106,13 +110,42 @@ Finally, the word is printed and its length is declared:
 ## __Flowchart__
 
 
+* This flowchart was created with lucidchart.com, in order to demonstrate how the program would function.
+
 ![Picture of flowchart](assets/readme/flowchart/hangman_flowchart.png)
 
-![]()
+
+## __Technologies Used__
+  * Python is the language that the game was coded in.
+  * The application is deployed on Heroku.
+  * The repository is hosted on GitHub.
+  * Gitpod was the workspace used to code, and build the content of the website, which would then be committed to GitHub.
+  * Git was used for version control.
+
 
 ## __Testing__
 
+* The code has passed through the pep8 online check, without any issues:
+
+![Screenshot of code successfuly passing through the pep8 validator](assets/readme/pep8_validation.png)
+
 ## __Bugs__
+
+* During the course of the development of this application, I encountered several bugs. The most complex one for me to solve can be seen below:
+
+* This code was causing an error message:
+
+![Screenshot of code which was throwing the error](assets/readme/errors/string_object_error_code.png)
+
+* This was the error message:
+
+![Screenshot of error message](assets/readme/errors/string_object_error.png)
+
+* This bug took me a long time to solve, which involved a lot of research. I understood that in Python, strings are immutable, but I thought that the code that I had used would convert the string into a list, allowing it to be modified, and then converted back into a string. After many hours of trial and error, and looking at examples of working code, I was able to find a working solution. 
+
+### Unfixed bugs
+
+* To the best of my knowledge, no bugs exist in the website in its current state.
 
 ## __Credits__
 
@@ -186,3 +219,12 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Robn88/hangman)
 
+### Acknowledgements
+
+* I would like to acknowledge the help provided to me by various people and websites, who have rendered the task of making this website easier, and in some cases, possible. In no particular order, I would like to thank:
+   * w3schools.com, whose tutorials on Python were a frequent reference for all matter of questions both large and small;
+   * stackoverflow.com, whose forums provided me with many helpful answers to problems I was experiencing when writing my code, and offered good examples for me to compare my code against;
+   * The Slack community of Code Institute, a consistent source of warmth and encouragement, especially when I felt I was hitting my head against a wall;
+   * The Code Institute tutor system, who were able to gently push me into the right direction when I felt like I had expended my last reserves of patience on some issues;
+   * My mentor Tim, who was as wonderful as ever in setting me straight;
+* And lastly, all of my friends and family who play-tested the application in its various iterations.
