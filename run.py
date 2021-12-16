@@ -28,7 +28,7 @@ def welcome_to_game():
 print("Welcome to hangman!")
 
 
-# Gets the words from the easy.txt file and stores them in a list.
+# Gets the words from the corresponding text files and stores them in a list.
 easy_words = []
 get_words = open('easy.txt').read().split()
 for word in get_words:
@@ -49,7 +49,7 @@ for word in get_words:
 
 def choose_difficulty():
     """
-    
+    A function that allows users to choose the difficulty of the words.
     """
     difficulty_choice = input("Which difficulty would you like?\nEasy - press 1\nMedium - press 2\nHard - press 3\n")
     print("Easy - press 1")
@@ -57,17 +57,17 @@ def choose_difficulty():
     print("Hard - press 3")
     if difficulty_choice == "1":
         clear()
-        print("You have chosen an easy word")
+        print("You have chosen an easy word.\n")
         word_to_guess = random.choice(easy_words)
         return word_to_guess
     elif difficulty_choice == "2":
         clear()
-        print("You have chosen a medium word")
+        print("You have chosen a medium word.\n")
         word_to_guess = random.choice(medium_words)
         return word_to_guess
     elif difficulty_choice == "3":
         clear()
-        print("You have chosen a difficult word")
+        print("You have chosen a difficult word.\n")
         word_to_guess = random.choice(hard_words)
         return word_to_guess
     else:
@@ -107,7 +107,9 @@ def main():
         Start of the loop- prints a list of letters already guessed, the
         hidden word, and elicits input from the user.
         """
-        print(f"Letters guessed so far: {already_guessed_letters} ")
+        print(f"Letters guessed so far: {already_guessed_letters}")
+        word_length = len(word_to_guess)
+        print(f"This word has {word_length} letters")
         print(hidden_word)
         print()
         guess = input("Please enter a letter:\n")
@@ -177,6 +179,7 @@ def main():
                         hidden_word = ("".join(convert_to_list))
                 if "_" not in hidden_word:
                     word_not_guessed = not True
+                    clear()
                     print(f"Congratulations {name} ! You found the word: {word_to_guess} \n")
                     end_game()
         else:
