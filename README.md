@@ -11,12 +11,18 @@ This game is modelled on the classic paper and pencil game of the same name. Aft
 ##  __Features__
 
 The game features a welcome message before the name input:
+
+
 ![Welcome message and name input:](assets/readme/welcome_screen.png)
 
 Upon entering a name, it presents the user wih a choice of difficulty:
+
+
 ![Choose difficulty input:](assets/readme/choose_difficulty.png)
 
 Finally, the word is printed and its length is declared:
+
+
 ![Game start screenshot:](assets/readme/game_start.png)
 
 ##  __Input validation__
@@ -60,5 +66,27 @@ Finally, the word is printed and its length is declared:
 
 ![Screenshot showing an invalid guess:](assets/readme/input_validation/invalid_guess.png)
 
+
+### End game input
+
+* Upon finishing a game, either winning or losing, the user will have the choice as to whether or not to play again:
+
+![Screenshot of end game options:](assets/readme/input_validation/end_game_options.png)
+
+* If the user inputs y, as in the screenshot below:
+
+![Screenshot of input of y on end game function:](assets/readme/input_validation/end_game_y.png)
+
+* They will be re-directed to the choose difficulty function, and can start a new game:
+
+![Screenshot showing the result of an input of y:](assets/readme/input_validation/restart_game_choose_difficulty.png)
+
+* If the user enters invalid input, they wil lsee the following message:
+
+![Screenshot showing invalid put for the end game function:](assets/readme/input_validation/end_game_invalid_command.png)
+
+* If the user enters n, then the game ends and they will see this message:
+
+![Screenshot showing message on exiting the game:](assets/readme/input_validation/end_game_n.png)
 
 ![]()
