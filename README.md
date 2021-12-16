@@ -21,7 +21,7 @@ Finally, the word is printed and its length is declared:
 
 ##  __Input validation__
 
-### Username input validation
+### Username input
 
 * The user must enter a valid username, which is composed uniquely of alphabetical characters:
 
@@ -36,4 +36,29 @@ Finally, the word is printed and its length is declared:
 ![Screenshot of message printed upon invalid name entry:](assets/readme/input_validation/invalid_name_message.png)
 
 
-### 
+### Choose difficulty input
+
+* TO BE DONE WHEN BUG FIXED
+
+
+
+### Guess letter input
+
+* If a user enters a letter, and that letter has not already been guessed, and the letter appears in the word, then they receive the following messages:
+
+![Screenshot showing successful guess:](assets/readme/input_validation/letter_input_correct.png)
+
+* If a user enters a letter that has already been guessed, they will see the following messages printed:
+
+![Screenshot showing letter already guessed:](assets/readme/input_validation/letter_already_guessed.png)
+
+* If a user enters a letter, and this does not appear in the word, then they will see the following messages:
+
+![Screenshot showing an incorrect guess:](assets/readme/input_validation/incorrect_answer.png)
+
+* If a user enters an invalid guess, i.e a number or a symbol, then they will receive the following message:
+
+![Screenshot showing an invalid guess:](assets/readme/input_validation/invalid_guess.png)
+
+
+![]()
