@@ -81,7 +81,7 @@ Finally, the word is printed and its length is declared:
 
 ![Screenshot showing the result of an input of y:](assets/readme/input_validation/restart_game_choose_difficulty.png)
 
-* If the user enters invalid input, they wil lsee the following message:
+* If the user enters invalid input, they will see the following message:
 
 ![Screenshot showing invalid put for the end game function:](assets/readme/input_validation/end_game_invalid_command.png)
 
@@ -89,4 +89,24 @@ Finally, the word is printed and its length is declared:
 
 ![Screenshot showing message on exiting the game:](assets/readme/input_validation/end_game_n.png)
 
+
+## __Flowchart__
+
+
+![Picture of flowchart](assets/readme/flowchart/hangman_flowchart.png)
+
 ![]()
+
+## __Testing__
+
+## __Bugs__
+
+## __Credits__
+
+* When researching this project, I did a lot of research on the best way to structure the code, e.g, should everything be within one function or not, which features should come in which order. I found [this Youtube Video](https://www.youtube.com/watch?v=m4nEnsavl6w&ab_channel=Kite) which proved very helpful. A link to the github repository used for the code in the video can be found by clicking [here](https://github.com/kiteco/python-youtube-code/tree/master/build-hangman-in-python).
+* I also used [this](https://inventwithpython.com/invent4thed/chapter8.html) website in order to gather ideas for the structure of the code.
+* The most complicated part of the code for me to code was on lines 178-181 on run.py. By studying the following answers on stack overflow, which answered the same problem as I was having, I was able to understand exactly what problems I was having.
+
+https://stackoverflow.com/questions/41747017/python-hangman-removing-blanks-from-the-answer-pool-and-refining-what-can-be-in
+
+https://stackoverflow.com/questions/26937153/python-hangman-replacing-letters
