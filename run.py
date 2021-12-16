@@ -71,6 +71,7 @@ def choose_difficulty():
         word_to_guess = random.choice(hard_words)
         return word_to_guess
     else:
+        clear()
         print("Please enter either 1, 2, or 3\n")
         choose_difficulty()
 

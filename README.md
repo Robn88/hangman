@@ -30,3 +30,10 @@ Finally, the word is printed and its length is declared:
 * If this is the case, then a greeting is printed with the name:
 
 ![Screenshot of the valid name passing through with a greeting printed:](assets/readme/input_validation/name_input_succeeded.png)
+
+* However, if the input is invalid, using a non-alphabetical character such as a number or a symbol, the following message is printed:
+
+![Screenshot of message printed upon invalid name entry:](assets/readme/input_validation/invalid_name_message.png)
+
+
+### 
