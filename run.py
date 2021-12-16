@@ -183,8 +183,6 @@ def main(word_to_guess):
                 already_guessed_letters.append(guess)
                 convert_to_list = list(hidden_word)
                 print(f"You have {lives_remaining} lives remaining.")
-                # for index, underscore in enumerate(hidden_word):
-                #     print(index, underscore)
                 for i, letter in enumerate(word_to_guess):
                     if guess == letter:
                         convert_to_list[i] = guess

@@ -44,8 +44,23 @@ Finally, the word is printed and its length is declared:
 
 ### Choose difficulty input
 
-* TO BE DONE WHEN BUG FIXED
+* When users have input their name successfully, they will then be faced with a choice of difficulties:
 
+![Screenshot of difficulty choice:](assets/readme/input_validation/cd_open.png)
+
+* If they do not input the correct character, either 1, 2, or 3, then the following happens:
+
+![Screenshot of invalid input](assets/readme/input_validation/cd_invalid_input.png)
+
+* If they enter the correct input, such as below...:
+
+![Screenshot of correct input](assets/readme/input_validation/cd_correct_input.png)
+
+* They will then pass to the game stage, with confirmation of their chouce printed at the top of the terminal.
+
+![Screenshot of confirmation of correct choice](assets/readme/input_validation/cd_confirmation.png)
+
+![]()
 
 
 ### Guess letter input
@@ -105,8 +120,7 @@ Finally, the word is printed and its length is declared:
 
 * When researching this project, I did a lot of research on the best way to structure the code, e.g, should everything be within one function or not, which features should come in which order. I found [this Youtube Video](https://www.youtube.com/watch?v=m4nEnsavl6w&ab_channel=Kite) which proved very helpful. A link to the github repository used for the code in the video can be found by clicking [here](https://github.com/kiteco/python-youtube-code/tree/master/build-hangman-in-python).
 * I also used [this](https://inventwithpython.com/invent4thed/chapter8.html) website in order to gather ideas for the structure of the code.
-* The most complicated part of the code for me to code was on lines 178-181 on run.py. By studying the following answers on stack overflow, which answered the same problem as I was having, I was able to understand exactly what problems I was having.
+* The most complicated part of the code for me to code was on lines 186-189 on run.py. By studying both [this](https://stackoverflow.com/questions/41747017/python-hangman-removing-blanks-from-the-answer-pool-and-refining-what-can-be-in) answer and [this](https://stackoverflow.com/questions/26937153/python-hangman-replacing-letters) one on stack overflow, I was able to understand exactly what problems I was having. 
 
-https://stackoverflow.com/questions/41747017/python-hangman-removing-blanks-from-the-answer-pool-and-refining-what-can-be-in
 
-https://stackoverflow.com/questions/26937153/python-hangman-replacing-letters
+
