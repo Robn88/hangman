@@ -60,8 +60,6 @@ Finally, the word is printed and its length is declared:
 
 ![Screenshot of confirmation of correct choice](assets/readme/input_validation/cd_confirmation.png)
 
-![]()
-
 
 ### Guess letter input
 
@@ -122,5 +120,69 @@ Finally, the word is printed and its length is declared:
 * I also used [this](https://inventwithpython.com/invent4thed/chapter8.html) website in order to gather ideas for the structure of the code.
 * The most complicated part of the code for me to code was on lines 186-189 on run.py. By studying both [this](https://stackoverflow.com/questions/41747017/python-hangman-removing-blanks-from-the-answer-pool-and-refining-what-can-be-in) answer and [this](https://stackoverflow.com/questions/26937153/python-hangman-replacing-letters) one on stack overflow, I was able to understand exactly what problems I was having. 
 
+##  __Deployment__
 
+* This application has been deployed to Heroku. I will describe the process I used below:
+
+* Log in to your Heroku account, and when you are on the dashboard, click on the new button in the top right-hand corner, and then click 'create new app'
+
+![](assets/readme/deployment/1heroku_dashboard.png)
+
+* You must now choose a name for your app, which must be unique, and the appropriate region.
+
+![](assets/readme/deployment/2name_region.png)
+
+* On the next page, you will see the Github logo. As my repository is stored there, I connected it to my github account.
+
+![](assets/readme/deployment/3connect_github.png)
+
+* You must then type in the name of your repository in order for it to be connected.
+
+![](assets/readme/deployment/4connect_repository.png)
+
+* Once that is done, click on the settings tab at the top.
+
+![](assets/readme/deployment/5click_settings.png)
+
+* Scroll down until you reach config vars, and click on the button, 'Reveal Config Vars'.
+
+![](assets/readme/deployment/6reveal_config_vars.png)
+
+* In the key section, type 'PORT' (it MUST be in capital letters) and in the value section, 8000.
+
+![](assets/readme/deployment/7add_port.png)
+
+* Next, select buildpacks, and add python, and nodejs.
+
+![](assets/readme/deployment/8add_buildpack.png)
+
+* When they have been successfully added, they should look as follows:
+
+![](assets/readme/deployment/9added_buildpacks.png)
+
+* Now, go back to the deploy tab, and scroll down until you see this button. Click 'Deploy Branch'.
+
+![](assets/readme/deployment/10deploy_branch.png)
+
+* You should see the terminal working while it deploys, as below:
+
+![](assets/readme/deployment/11building_app.png)
+
+* If everything has been successful, then you should see the following message printed:
+
+![](assets/readme/deployment/12successfully_deployed.png)
+
+* By clicking 'View', you will be able to see the app running in a new tab, as below:
+
+![](assets/readme/deployment/13app_working.png)
+
+### Local Deployment
+
+If you would like to make a clone of this repository, you can type the following command in your IDE terminal:
+
+- `git clone https://github.com/Robn88/hangman`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Robn88/hangman)
 
