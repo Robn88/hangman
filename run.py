@@ -16,12 +16,14 @@ def welcome_to_game():
     """
     while True:
         global name
-        name = input("Please enter your name:")
+        name = input("Please enter your name:\n")
+        clear()
         if name.isalpha() is True:
             print(f"Hello, {name}!")
             break
         else:
-            print(f"Sorry, {name} is not a valid name.Please try again.")
+            print(f"Sorry, {name} is not a valid name. Please try again.")
+    choose_difficulty()
 
 
 # Welcome message
@@ -51,29 +53,31 @@ def choose_difficulty():
     """
     A function that allows users to choose the difficulty of the words.
     """
-    difficulty_choice = input("Which difficulty would you like?\nEasy - press 1\nMedium - press 2\nHard - press 3\n")
-    print("Easy - press 1")
-    print("Medium - press 2")
-    print("Hard - press 3")
-    if difficulty_choice == "1":
+    while True:
+        global word_to_guess
+        difficulty_choice = input(
+            "Which difficulty would you like?\n"
+            "Easy - press 1\n"
+            "Medium - press 2\n"
+            "Hard - press 3\n")
         clear()
-        print("You have chosen an easy word.\n")
-        word_to_guess = random.choice(easy_words)
-        return word_to_guess
-    elif difficulty_choice == "2":
-        clear()
-        print("You have chosen a medium word.\n")
-        word_to_guess = random.choice(medium_words)
-        return word_to_guess
-    elif difficulty_choice == "3":
-        clear()
-        print("You have chosen a difficult word.\n")
-        word_to_guess = random.choice(hard_words)
-        return word_to_guess
-    else:
-        clear()
-        print("Please enter either 1, 2, or 3\n")
-        choose_difficulty()
+        if difficulty_choice == "1":
+            print("You have chosen an easy word.\n")
+            word_to_guess = random.choice(easy_words)
+            break
+        elif difficulty_choice == "2":
+            print("You have chosen a medium word.\n")
+            word_to_guess = random.choice(medium_words)
+            break
+        elif difficulty_choice == "3":
+            print("You have chosen a difficult word.\n")
+            word_to_guess = random.choice(hard_words)
+            break
+        else:
+            print(f"Sorry, {difficulty_choice} is not a valid input.")
+            print("Please enter either 1, 2, or 3\n")
+            choose_difficulty()
+    main(word_to_guess)
 
 
 def end_game():
@@ -84,21 +88,24 @@ def end_game():
     if continue_playing == "y":
         print("\n")
         clear()
-        main()
+        choose_difficulty()
     elif continue_playing == "n":
         clear()
         print(f"Thanks for playing {name}, see you soon!")
     else:
-        print(f"Sorry, {continue_playing} is not a valid command. Please press y or n. \n")
+        clear()
+        print(
+            f"Sorry, {continue_playing} is not a valid command.")
+        print("Please press y or n. \n")
         end_game()
 
-        
-def main():
+
+def main(word_to_guess):
     """
-    The main function is where the bulk of the game runs. It begins by setting
-    global variables, which will then be used in the loop.
+    The main function is where the bulk of the game runs.
+    It begins by setting global variables,
+    which will then be used in the loop.
     """
-    word_to_guess = choose_difficulty()
     hidden_word = "_" * len(word_to_guess)
     already_guessed_letters = []
     lives_remaining = 10
@@ -133,6 +140,7 @@ def main():
                 appended to the list of already guessed letters, and a
                 life is deducted.
                 """
+                clear()
                 print(f"Bad luck! {guess} is not in the word!")
                 already_guessed_letters.append(guess)
                 lives_remaining -= 1
@@ -142,7 +150,9 @@ def main():
                     word_to_guess is revealed, and the end_game function
                     is called.
                     """
-                    print(f"Oh no!{name}, you've run out of lives!\nThe correct word was {word_to_guess}! ")
+                    print(
+                        f"Oh no! {name}, you've run out of lives!")
+                    print(f"The correct word was {word_to_guess}!")
                     end_game()
                 elif lives_remaining == 1:
                     """
@@ -157,7 +167,7 @@ def main():
                     """
                     print(f"You have {lives_remaining} lives remaining.")
             else:
-                """ 
+                """
                 If the letter guessed fulfills the initial criteria,i.e it is a
                 single alphabetical character, has not been guessed before, and
                 passes the elif statement on line 64, it must be in the word.
@@ -182,16 +192,15 @@ def main():
                 if "_" not in hidden_word:
                     word_not_guessed = not True
                     clear()
-                    print(f"Congratulations {name} ! You found the word: {word_to_guess} \n")
+                    print(f"Congratulations {name}!")
+                    print(f"You found the word: {word_to_guess} \n")
                     end_game()
         else:
             """
             An else statement designed to catch any incorrect input.
             """
+            clear()
             print(f"Sorry, {guess} is not a valid guess.")
 
 
 welcome_to_game()
-
-
-main()
