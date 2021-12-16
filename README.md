@@ -1,31 +1,32 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman
 
-Welcome Robn88,
+Hangman is a word-guessing game, that runs in a terminal. The objective of the game is to find the word by guessing letters.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+The live version of the website can be found by clicking [here](https://pyth-hangman.herokuapp.com/).
 
-## Reminders
+##  __How to play__
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+This game is modelled on the classic paper and pencil game of the same name. After inputting their name and choosing the difficulty, players will be presented with a series of underscores, and told how many letters are in the word. They then have 10 lives, and must successfuly find all of the letters in the word before they run out.
 
-## Creating the Heroku app
+##  __Features__
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+The game features a welcome message before the name input:
+![Welcome message and name input:](assets/readme/welcome_screen.png)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+Upon entering a name, it presents the user wih a choice of difficulty:
+![Choose difficulty input:](assets/readme/choose_difficulty.png)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+Finally, the word is printed and its length is declared:
+![Game start screenshot:](assets/readme/game_start.png)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+##  __Input validation__
 
-Connect your GitHub repository and deploy as normal.
+### Username input validation
 
-## Constraints
+* The user must enter a valid username, which is composed uniquely of alphabetical characters:
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+![Screenshot of name input with valid name](assets/readme/input_validation/name_input.png)
 
------
-Happy coding!
+* If this is the case, then a greeting is printed with the name:
+
+![Screenshot of the valid name passing through with a greeting printed:](assets/readme/input_validation/name_input_succeeded.png)
