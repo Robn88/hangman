@@ -29,6 +29,8 @@ Finally, the word is printed and its length is declared:
 
 * There are several ways that the game could be improved, and more functionalities could be added. For example, by importing the Python time module, it would be possible to have a countdown timer to guess the correct word, or to calculate the overall time and compare it against other players. On that subject, at the moment, the game is a single-player experience, and no scores are recorded. It could be possible to store the scores in a document, that could then be accessed by different players.
 
+* Another possibility would be to add a visual element to the game, using symbols to build a 'hangman'. Thus, rather than merely displaying the number of lives remaining, this could be accompanied by a drawing of hangman, which becomes more detailed with incorrect answers.
+
 ##  __Input validation__
 
 ### Username input
